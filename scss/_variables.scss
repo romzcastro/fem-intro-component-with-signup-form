@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+$clr-primary-1: hsl(0, 100%, 74%);
+$clr-primary-2: hsl(154, 59%, 51%);
+
+$clr-secondary-1: hsl(248, 32%, 49%);
+
+$clr-neutral-1: hsl(0, 0%, 100%);
+$clr-neutral-2: hsl(249, 10%, 26%);
+$clr-neutral-3: hsl(246, 25%, 77%);
+
+$ff-accent: "Poppins", sans-serif;
+
+$fw-400: 400;
+$fw-500: 500;
+$fw-600: 600;
+$fw-700: 700;
+
+@mixin text-base {
+  font-size: 1rem; /* 16px */
+  line-height: 1.5rem; /* 24px */
+}
+@mixin text-lg {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75rem; /* 28px */
+}
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

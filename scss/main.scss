@@ -1,0 +1,14 @@
+@import "./resets";
+@import "./variables";
+
+body {
+  background-image: url(/images/bg-intro-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $clr-primary-1;
+  font-family: $ff-accent;
+  @include text-base;
+  height: 100vh;
+  text-align: center;
+  @include flexCenter;
+}
