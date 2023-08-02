@@ -8,7 +8,73 @@ body {
   background-color: $clr-primary-1;
   font-family: $ff-accent;
   @include text-base;
+  @include flexCenter;
+  color: $clr-neutral-4;
   height: 100vh;
   text-align: center;
-  @include flexCenter;
+}
+.wrapper {
+  padding: 1.25em;
+  h2 {
+    color: $clr-neutral-1;
+    font-size: 1.75rem;
+    line-height: 1.25;
+    padding-bottom: 1em;
+  }
+
+  .hero__paragraph {
+    padding-bottom: 3em;
+  }
+
+  .registration {
+    & .registration__button-1 {
+      background-color: $clr-secondary-1;
+      border-radius: 0.75em;
+      border: none;
+      box-shadow: 0 6px 0px hsla(0, 0%, 0%, 0.1);
+      color: $clr-neutral-4;
+      padding: 1em;
+      width: 100%;
+      margin-bottom: 1.25em;
+
+      & span {
+        color: $clr-neutral-3;
+      }
+    }
+    & .form-container {
+      @include flexCenter;
+      background-color: $clr-neutral-1;
+      border-radius: 1em;
+      box-shadow: 0 10px 0px hsla(0, 0%, 0%, 0.1);
+      width: 100%;
+      padding: 1.5em;
+
+      & input {
+        border-radius: 0.25em;
+        padding: 0.75em;
+        margin: 0.5em 0em;
+        width: 100%;
+      }
+      & .form__Button {
+        border: none;
+        border-radius: 0.5em;
+        background-color: $clr-primary-2;
+        box-shadow: 0 4px 0px hsl(153, 59%, 46%);
+        color: $clr-neutral-1;
+        padding: 0.85em;
+        margin: 0.5em 0em;
+        width: 100%;
+      }
+      & .form__paragraph {
+        color: $clr-neutral-3;
+        font-size: 0.6875rem;
+
+        & a {
+          color: $clr-primary-1;
+          font-weight: $fw-700;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }

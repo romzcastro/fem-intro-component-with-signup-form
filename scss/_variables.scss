@@ -8,6 +8,8 @@ $clr-secondary-1: hsl(248, 32%, 49%);
 $clr-neutral-1: hsl(0, 0%, 100%);
 $clr-neutral-2: hsl(249, 10%, 26%);
 $clr-neutral-3: hsl(246, 25%, 77%);
+$clr-neutral-4: hsl(14, 100%, 97%);
+$clr-neutral-5: hsl(153, 59%, 46%);
 
 $ff-accent: "Poppins", sans-serif;
 
@@ -19,6 +21,7 @@ $fw-700: 700;
 @mixin text-base {
   font-size: 1rem; /* 16px */
   line-height: 1.5rem; /* 24px */
+  font-weight: $fw-500;
 }
 @mixin text-lg {
   font-size: 1.125rem; /* 18px */
@@ -28,4 +31,5 @@ $fw-700: 700;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
