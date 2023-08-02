@@ -33,7 +33,7 @@ body {
       border: none;
       box-shadow: 0 6px 0px hsla(0, 0%, 0%, 0.1);
       color: $clr-neutral-4;
-      padding: 1em;
+      padding: 1.25em;
       width: 100%;
       margin-bottom: 1.25em;
 
@@ -44,15 +44,17 @@ body {
     & .form-container {
       @include flexCenter;
       background-color: $clr-neutral-1;
-      border-radius: 1em;
+      border-radius: 0.75em;
       box-shadow: 0 10px 0px hsla(0, 0%, 0%, 0.1);
       width: 100%;
       padding: 1.5em;
 
       & input {
         border-radius: 0.25em;
-        padding: 0.75em;
+        border: none;
         margin: 0.5em 0em;
+        padding: 0.75em;
+        outline: 1px solid $clr-neutral-6;
         width: 100%;
       }
       & .form__Button {
@@ -76,5 +78,18 @@ body {
         }
       }
     }
+  }
+}
+@media screen and (min-width: 48em) {
+  body {
+    background-image: url(/images/bg-intro-desktop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 64em;
   }
 }
