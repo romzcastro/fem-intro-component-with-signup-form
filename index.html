@@ -11,6 +11,8 @@
     />
     <link rel="stylesheet" href="./dist/css/main.css" />
     <title>Frontend Mentor Challenge | Intro Component with signup form</title>
+  </head>
+  <body>
     <main>
       <section class="wrapper">
         <section class="hero">
@@ -24,48 +26,68 @@
         <!-- hero section -->
         <section class="registration">
           <button class="registration__button-1">
-            Try it Free 7 days <span>then</span><br /><span
-              >$20/mon. thereafter</span
-            >
+            Try it Free 7 days <span>then $20/mon. thereafter</span>
           </button>
-          <div class="form-container">
-            <form>
-              <input
-                type="text"
-                id="given-name"
-                placeholder="First Name"
-                required
-              />
+          <form class="form-container" id="form">
+            <div class="form-control error">
+              <label>First Name</label>
+              <input type="text" id="given-name" placeholder="First Name" />
+              <i class="icon-error"
+                ><img src="./images/icon-error.svg" alt="icon error"
+              /></i>
+              <small>Error Message</small>
+            </div>
+            <div class="form-control">
+              <label>Last Name</label>
               <input
                 type="text"
                 id="family-name"
                 placeholder="Last Name"
                 required
               />
+              <i class="icon-error"
+                ><img src="./images/icon-error.svg" alt="icon error"
+              /></i>
+              <small>Error Message</small>
+            </div>
+            <div class="form-control">
+              <label>Email Address</label>
               <input
                 type="email"
                 id="email"
                 placeholder="Email Address"
                 required
               />
+              <i class="icon-error"
+                ><img src="./images/icon-error.svg" alt="icon error"
+              /></i>
+              <small>Error Message</small>
+            </div>
+            <div class="form-control">
+              <label>Password</label>
               <input
                 type="password"
                 id="password"
                 placeholder="Password"
                 required
               />
-              <button class="form__Button">CLAIM YOUR FREE TRIAL</button>
-            </form>
+              <i class="icon-error"
+                ><img src="./images/icon-error.svg" alt="icon error"
+              /></i>
+              <small>Error Message</small>
+            </div>
+            <button class="form__Button">CLAIM YOUR FREE TRIAL</button>
             <p class="form__paragraph">
               By clicking the button you are agreeing to our
               <a href="#">Terms and Services</a>
             </p>
-          </div>
+          </form>
           <!-- form container -->
         </section>
+        <!-- registration -->
       </section>
       <!-- wrapper -->
     </main>
-  </head>
-  <body></body>
+    <script src="./main.js"></script>
+  </body>
 </html>

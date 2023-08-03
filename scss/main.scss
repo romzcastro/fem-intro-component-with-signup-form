@@ -10,7 +10,7 @@ body {
   @include text-base;
   @include flexCenter;
   color: $clr-neutral-4;
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
 }
 .wrapper {
@@ -33,7 +33,7 @@ body {
       border: none;
       box-shadow: 0 6px 0px hsla(0, 0%, 0%, 0.1);
       color: $clr-neutral-4;
-      padding: 1.25em;
+      padding: 1.25em 3em;
       width: 100%;
       margin-bottom: 1.25em;
 
@@ -46,17 +46,46 @@ body {
       background-color: $clr-neutral-1;
       border-radius: 0.75em;
       box-shadow: 0 10px 0px hsla(0, 0%, 0%, 0.1);
-      width: 100%;
       padding: 1.5em;
-
-      & input {
-        border-radius: 0.25em;
-        border: none;
-        margin: 0.5em 0em;
-        padding: 0.75em;
-        outline: 1px solid $clr-neutral-6;
+      & .form-control {
+        text-align: right;
         width: 100%;
+        position: relative;
+        & label {
+          color: $clr-primary-1;
+          display: none;
+        }
+        & input {
+          border-radius: 0.25em;
+          border: none;
+          padding: 0.75em;
+          outline: 1px solid $clr-neutral-6;
+          width: 100%;
+        }
+        &.success input {
+          outline: 1px solid $clr-primary-2;
+        }
+        &.error input {
+          outline: 1px solid $clr-primary-1;
+        }
+        &.success i.icon-error {
+          visibility: hidden;
+        }
+        &.error i.icon-error {
+          visibility: visible;
+        }
+        & i {
+          position: absolute;
+          top: 13px;
+          right: 10px;
+          visibility: hidden;
+        }
+        & small {
+          font-size: 0.875rem;
+          visibility: hidden;
+        }
       }
+
       & .form__Button {
         border: none;
         border-radius: 0.5em;
@@ -85,11 +114,26 @@ body {
     background-image: url(/images/bg-intro-desktop.png);
     background-size: cover;
     background-repeat: no-repeat;
+    text-align: left;
   }
   .wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 64em;
+    max-width: 80em;
+    padding: 2em 3.5em;
+    & .hero {
+      flex: 1 0;
+      padding: 1.5em;
+
+      & h2 {
+        font-size: 3.25rem;
+      }
+    }
+    & .registration {
+      flex: 1 0;
+      @include text-lg;
+      padding: 1.5em;
+    }
   }
 }
