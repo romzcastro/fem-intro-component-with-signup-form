@@ -23,31 +23,15 @@ function checkInputs() {
     setErrorFor(givenName, "Given Name cannot be blank");
   } else {
     // add success class
-    setSuccessFor(username);
+    setSuccessFor(givenName);
   }
   if (familyNameValue === "") {
     // show error
     // add error class
-    setErrorFor(familyNameValue, "Last Name cannot be blank");
+    setErrorFor(familyName, "Family Name cannot be blank");
   } else {
     // add success class
-    setSuccessFor(username);
-  }
-  if (emailValue === "") {
-    // show error
-    // add error class
-    setErrorFor(emailValue, "Please enter a valid email address");
-  } else {
-    // add success class
-    setSuccessFor(username);
-  }
-  if (passwordValue === "") {
-    // show error
-    // add error class
-    setErrorFor(passwordValue, "Please enter a valid email address");
-  } else {
-    // add success class
-    setSuccessFor(username);
+    setSuccessFor(familyName);
   }
 }
 
@@ -60,4 +44,9 @@ function setErrorFor(input, message) {
 
   // add error class
   formControl.className = "form-control error";
+}
+
+function setSuccessFor(input) {
+  const formControl = input.parentElement;
+  formControl.className = "form-control success";
 }

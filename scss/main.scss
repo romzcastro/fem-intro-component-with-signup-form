@@ -51,6 +51,7 @@ body {
         text-align: right;
         width: 100%;
         position: relative;
+        padding-bottom: 0.5em;
         & label {
           color: $clr-primary-1;
           display: none;
@@ -76,13 +77,20 @@ body {
         }
         & i {
           position: absolute;
-          top: 13px;
-          right: 10px;
+          top: 15px;
+          right: 20px;
           visibility: hidden;
         }
         & small {
           font-size: 0.875rem;
           visibility: hidden;
+        }
+        &.success small {
+          visibility: hidden;
+        }
+        &.error small {
+          color: $clr-primary-1;
+          visibility: visible;
         }
       }
 
