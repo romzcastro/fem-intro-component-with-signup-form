@@ -91,6 +91,7 @@ body {
         &.error small {
           color: $clr-primary-1;
           visibility: visible;
+          font-style: italic;
         }
       }
 

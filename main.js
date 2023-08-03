@@ -33,6 +33,20 @@ function checkInputs() {
     // add success class
     setSuccessFor(familyName);
   }
+  if (emailValue === "") {
+    setErrorFor(email, "Email cannot be blank");
+    var input = document.getElementById("email");
+    input.placeholder = "example@mail/com";
+  } else if (!isEmail(emailValue)) {
+    setErrorFor(email, "Looks like this is not an email");
+  } else {
+    setSuccessFor(email);
+  }
+  if (passwordValue === "") {
+    setErrorFor(password, "Password cannot be empty");
+  } else {
+    setSuccessFor(password);
+  }
 }
 
 function setErrorFor(input, message) {
@@ -49,4 +63,9 @@ function setErrorFor(input, message) {
 function setSuccessFor(input) {
   const formControl = input.parentElement;
   formControl.className = "form-control success";
+}
+function isEmail(email) {
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+    email
+  );
 }
