@@ -116,6 +116,9 @@ body {
     background-repeat: no-repeat;
     text-align: left;
   }
+  button {
+    cursor: pointer;
+  }
   .wrapper {
     display: flex;
     justify-content: center;

@@ -25,6 +25,30 @@ function checkInputs() {
     // add success class
     setSuccessFor(username);
   }
+  if (familyNameValue === "") {
+    // show error
+    // add error class
+    setErrorFor(familyNameValue, "Last Name cannot be blank");
+  } else {
+    // add success class
+    setSuccessFor(username);
+  }
+  if (emailValue === "") {
+    // show error
+    // add error class
+    setErrorFor(emailValue, "Please enter a valid email address");
+  } else {
+    // add success class
+    setSuccessFor(username);
+  }
+  if (passwordValue === "") {
+    // show error
+    // add error class
+    setErrorFor(passwordValue, "Please enter a valid email address");
+  } else {
+    // add success class
+    setSuccessFor(username);
+  }
 }
 
 function setErrorFor(input, message) {
