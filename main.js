@@ -21,6 +21,8 @@ function checkInputs() {
     // show error
     // add error class
     setErrorFor(givenName, "Given Name cannot be blank");
+    var input = document.getElementById("given-name");
+    input.placeholder = "";
   } else {
     // add success class
     setSuccessFor(givenName);
@@ -29,6 +31,8 @@ function checkInputs() {
     // show error
     // add error class
     setErrorFor(familyName, "Family Name cannot be blank");
+    var input = document.getElementById("family-name");
+    input.placeholder = "";
   } else {
     // add success class
     setSuccessFor(familyName);
@@ -44,6 +48,8 @@ function checkInputs() {
   }
   if (passwordValue === "") {
     setErrorFor(password, "Password cannot be empty");
+    var input = document.getElementById("password");
+    input.placeholder = "";
   } else {
     setSuccessFor(password);
   }

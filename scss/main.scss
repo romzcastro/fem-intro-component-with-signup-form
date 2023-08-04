@@ -62,13 +62,11 @@ body {
           padding: 0.75em;
           outline: 1px solid $clr-neutral-6;
           width: 100%;
-
-          &:invalid {
-            &::placeholder {
-              color: $clr-primary-1;
-            }
-          }
         }
+        &.error #email::placeholder {
+          color: $clr-primary-1;
+        }
+
         &.success input {
           outline: 1px solid $clr-primary-2;
         }
@@ -110,6 +108,9 @@ body {
         padding: 0.85em;
         margin: 0.5em 0em;
         width: 100%;
+        &:active {
+          background-color: $clr-secondary-2;
+        }
       }
       & .form__paragraph {
         color: $clr-neutral-3;
@@ -152,6 +153,18 @@ body {
       flex: 1 0;
       @include text-lg;
       padding: 1.5em;
+      & .form-container {
+        & .form__Button {
+          &:hover {
+            background-color: $clr-secondary-2;
+          }
+        }
+        & .form-control {
+          &.error #email::placeholder {
+            color: $clr-primary-1;
+          }
+        }
+      }
     }
   }
 }
